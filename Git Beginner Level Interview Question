@@ -1,0 +1,45 @@
+1. What is Git ?
+Git is software for tracking changes in any set of files, Used for version control. It is distributed system.
+usually used for coordinating work among programmers collaboratively 
+developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows
+
+2. Difference between Git and Github ?
+Git is a version control system that lets you manage and keep track of your source code history. GitHub is a cloud-based hosting service that lets you manage Git repositories. 
+If you have open-source projects that use Git, then GitHub is designed to help you better manage them.
+
+3. What does git clone do?
+The command creates a copy (or clone) of an existing git repository. Generally, it is used to get a copy of the remote repository to the local repository.
+
+4. What does the command git config do?
+The git config command is a convenient way to set configuration options for defining the behavior of the repository, user information and preferences, git installation-based configurations, and many such things. 
+
+For example:
+To set up your name and email address before using git commands, we can run the below commands:
+
+git config --global
+user.name
+“<<your_name>>”
+ 
+git config --global user.email “<<your_email>>”
+
+5. Difference between git add and commit command
+git add : takes a modified file in your working directory and places the modified version in a staging area. 
+git commit: takes everything from the staging area and makes a permanent snapshot of the current state of your repository that is associated with a unique identifier.
+
+6. what is staging area in git
+These files are also referred to as "untracked files." Staging area is files that are going to be a part of the next commit, 
+which lets git know what changes in the file are going to occur for the next commit. The repository contains all of a project's commits.
+
+7. How do you fix broken commit ?
+git commit --amend 'commit message'
+
+8. What is conflict in git ?
+A conflict arises when two separate branches have made edits to the same line in a file, or when a file has been deleted in one branch but edited in the other. 
+Conflicts will most likely happen when working in a team environment.
+
+9. How you can resolve git conflict ?
+The easiest way to resolve a conflicted file is to manually update the changes in file and then add followed with commit ccommand. 
+
+10. How do you revert a commit that has already been pushed and made public ?
+Approach 1 : 
+
