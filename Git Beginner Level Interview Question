@@ -43,3 +43,30 @@ The easiest way to resolve a conflicted file is to manually update the changes i
 10. How do you revert a commit that has already been pushed and made public ?
 Approach 1 : 
 
+11.Can you explain head in terms of git and also tell the number of heads that can be present in a repository?
+A head is nothing but a reference to the last commit object of a branch.
+For every repository, there will always be a default head referred to as “master” or now “main” (as per GitHub) but there is no restriction to the count of heads available. In other words, it can have any number of heads.
+Usages:
+
+- To go or checkout to 1 commit before the latest commit, we use git checkout HEAD~1
+- To uncommit the last 3 commits without losing the changes, we first run git reset HEAD~3. Then we can see the changes made in the last 3 commits and then update it manually and commit it finally.
+- In order to uncommit the last 3 commits and also remove the changes, we can run the command: git reset --hard HEAD~3. This command will completely remove all the changes.
+- To look into the changes made in the last 3 commits, we can run git diff HEAD~3
+- To make a new commit by reverting the last 3 commits, we can run the command: git revert --no-commit HEAD~3...HEAD
+
+12. What does git status command do?
+git status command is used for showing the difference between the working directory and the index which is helpful for understanding git in-depth and also keep track of the tracked and non-tracked changes
+
+13. Difference between git fetch and git pull.
+
+Git fetch : Git fetches only downloads new data from a remote repository.
+            It does not integrate any of these new data into your working files.
+            Can be done any time to update the remote-tracking branches
+            Command - git fetch origin
+            git fetch –-all
+ 
+Git pull: Git pull updates the current HEAD branch with the latest changes from the remote server.
+          Downloads new data and integrate it with the current working files.
+          Tries to merge remote changes with your local ones.
+          Command - git pull origin master
+
