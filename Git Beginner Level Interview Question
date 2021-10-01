@@ -75,4 +75,7 @@ Git pull: Git pull updates the current HEAD branch with the latest changes from 
           Tries to merge remote changes with your local ones.
           Command - git pull origin master
 
+14. What is Git stash?
+Let’s say you're a developer and you want to switch branches to work on something else. The issue is you don’t want to make commits in uncompleted work, so you just want to get back to this point later. The solution here is the Git stash. 
 
+Git stash takes your modified tracked files and saves it on a stack of unfinished changes that you can reapply at any time. To go back to the work you can use the stash pop.
