@@ -41,7 +41,12 @@ Conflicts will most likely happen when working in a team environment.
 The easiest way to resolve a conflicted file is to manually update the changes in file and then add followed with commit ccommand. 
 
 10. How do you revert a commit that has already been pushed and made public ?
-Approach 1 : 
+There are two processes through which you can revert a commit:
+1. Remove or fix the bad file in a new commit and push it to the remote repository. Then commit it to the remote repository using:
+git commit –m “commit message”
+
+2. Create a new commit to undo all the changes that were made in the bad commit. Use the following command:
+git revert <commit id>
 
 11.Can you explain head in terms of git and also tell the number of heads that can be present in a repository?
 A head is nothing but a reference to the last commit object of a branch.
